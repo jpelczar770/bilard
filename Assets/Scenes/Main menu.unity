@@ -928,8 +928,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: PIlJarT
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9b93a7e8cd42aca4d800e54b35198454, type: 2}
+  m_sharedMaterial: {fileID: 9157022649376170263, guid: 9b93a7e8cd42aca4d800e54b35198454, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
