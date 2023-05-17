@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - "st\xF3\u0142"
+  - bila
+  - "\u0142uza"
   layers:
   - Default
   - TransparentFX
