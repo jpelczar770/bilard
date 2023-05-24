@@ -385,7 +385,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 11.088221, y: -12.55774}
+  m_Offset: {x: 10.814518, y: -12.55774}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -396,7 +396,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 19.257713, y: 2.959364}
+  m_Size: {x: 18.710308, y: 2.959364}
   m_EdgeRadius: 0
 --- !u!1 &227016290
 GameObject:
@@ -656,7 +656,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -11.08822, y: 12.557744}
+  m_Offset: {x: -10.81452, y: 12.557744}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -667,7 +667,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 19.257713, y: 2.959364}
+  m_Size: {x: 18.710308, y: 2.959364}
   m_EdgeRadius: 0
 --- !u!1 &509220625
 GameObject:
@@ -853,7 +853,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 11.088221, y: 12.557744}
+  m_Offset: {x: 10.814518, y: 12.557744}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -864,7 +864,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 19.257713, y: 2.959364}
+  m_Size: {x: 18.710308, y: 2.959364}
   m_EdgeRadius: 0
 --- !u!1 &604687518
 GameObject:
@@ -945,7 +945,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -11.08822, y: -12.55774}
+  m_Offset: {x: -10.81452, y: -12.55774}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -956,7 +956,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 19.257713, y: 2.959364}
+  m_Size: {x: 18.710308, y: 2.959364}
   m_EdgeRadius: 0
 --- !u!1 &750804916
 GameObject:
@@ -1746,7 +1746,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -23.33425, y: 0.00000047683716}
+  m_Offset: {x: -23.33425, y: 0.0000009536743}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1757,7 +1757,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.7812462, y: 19.703022}
+  m_Size: {x: 2.7812462, y: 17.984285}
   m_EdgeRadius: 0
 --- !u!1 &1622791901 stripped
 GameObject:
@@ -1870,7 +1870,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 23.33425, y: 0.00000047683716}
+  m_Offset: {x: 23.33425, y: 0.0000009536743}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1881,7 +1881,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.7812462, y: 19.703022}
+  m_Size: {x: 2.7812462, y: 17.984285}
   m_EdgeRadius: 0
 --- !u!1 &1882134797 stripped
 GameObject:
@@ -2229,6 +2229,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2056396299}
   - component: {fileID: 2056396298}
+  - component: {fileID: 2056396300}
   m_Layer: 0
   m_Name: "st\xF3\u0142"
   m_TagString: "st\xF3\u0142"
@@ -2303,6 +2304,27 @@ Transform:
   m_Father: {fileID: 1498927334}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &2056396300
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056396296}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 6200000, guid: 497c512415e19f3468441daec8af2967, type: 2}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &2059829590 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1455158705107333065, guid: 3bc0d9a9a5f395d479aadebae25777e3, type: 3}
