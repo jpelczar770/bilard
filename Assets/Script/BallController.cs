@@ -10,22 +10,28 @@ public class BallController : MonoBehaviour
     public float endWidth = 0.0f;
     public Color startColour = Color.white;
     public Color endColour = Color.clear;
+    public Vector3 respawnposition = new Vector3 (-11,0,-0.5f);
 
     private LineRenderer lineRenderer;
 
     [SerializeField] GameObject bialaBila = null;
     [SerializeField] float power = 20f;
     [SerializeField] Transform arrow = null;
-    [SerializeField] List<ColorBall>ballList = new List<ColorBall>();
+    [SerializeField] List<Rigidbody2D>ballList = new List<Rigidbody2D>();
 
-    Vector2 mousePosition = new Vector3();
+    Vector2 mousePosition = new Vector2();
+    Vector2 zero = new Vector2 (0,0);
     Rigidbody2D bialaRigid = null;
+    SpriteRenderer sprite = null;
+    CircleCollider2D collider = null;
     Vector2 bialaBilaDefaultPosition = new Vector2();
 
     // Start is called before the first frame update
     void Start()
     {
         bialaRigid = bialaBila.GetComponent<Rigidbody2D>();
+        sprite = bialaBila.GetComponent<SpriteRenderer>();
+        collider = bialaBila.GetComponent<CircleCollider2D>();
         bialaBilaDefaultPosition = bialaBila.transform.localPosition;
         arrow.gameObject.SetActive(false);
 
@@ -49,55 +55,83 @@ public class BallController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (bialaBila.activeSelf == true)
+        bool bilewruchu = false;
+        foreach (Rigidbody2D bila in ballList)
         {
-            if (Input.GetMouseButtonDown(0) == true)
+           if (bila.velocity.magnitude < 1)
             {
-                mousePosition = Input.mousePosition;
-                arrow.gameObject.SetActive(true);
-                Debug.Log("Click started");
-                Vector3 startPos = bialaBila.transform.localPosition + Vector3.forward;
-                lineRenderer.SetPosition(0, startPos);
-                lineRenderer.SetPosition(1, startPos);
-                lineRenderer.enabled = true;
+                bila.velocity = zero;
             }
-
-            if (Input.GetMouseButton(0) == true)
+            else
             {
-                Vector2 position = Input.mousePosition;
-
-                Vector2 def = mousePosition - position;
-                float rad = Mathf.Atan2(def.x, def.y);
-                float angle = rad*Mathf.Rad2Deg;
-                Vector3 rot = new Vector3(0, angle, 0);
-                Quaternion qua = Quaternion.Euler(rot);
-
-                arrow.localRotation = qua;
-                arrow.transform.position = bialaBila.transform.position;
-
-                Vector3 endPos = Camera.main.ScreenToWorldPoint(Input.mousePosition) + Vector3.forward;
-                lineRenderer.SetPosition(1, endPos);
-
-            }
-
-            if (Input.GetMouseButtonUp(0) == true)
-            {
-                Vector2 upPosition = Input.mousePosition;
-
-                Vector2 def = mousePosition - upPosition;
-                Vector2 add = new Vector2(def.x, def.y);
-
-                bialaRigid.AddForce(add*power);
-                arrow.gameObject.SetActive(false);
-
-                Debug.Log("Finish clicking");
-
-                // We've let go, so hide the drag line
-                lineRenderer.enabled = false;
+                bilewruchu = bilewruchu | true;
             }
         }
 
+        if (bialaBila.activeSelf == true)
+        {
+            if (bialaRigid.velocity.magnitude < 1)
+            {
+                bialaRigid.velocity = zero;
+            }
+            else
+            {
+                bilewruchu = bilewruchu | true;
+            }
 
+                if (!bilewruchu)
+                {
+                    if (Input.GetMouseButtonDown(0) == true)
+                    {
+                        mousePosition = Input.mousePosition;
+                        arrow.gameObject.SetActive(true);
+                        Vector3 startPos = bialaBila.transform.localPosition + Vector3.forward;
+                        lineRenderer.SetPosition(0, startPos);
+                        lineRenderer.SetPosition(1, startPos);
+                        lineRenderer.enabled = true;
+                    }
+
+                    if (Input.GetMouseButton(0) == true)
+                    {
+                        Vector2 position = Input.mousePosition;
+
+                        Vector2 def = mousePosition - position;
+                        float rad = Mathf.Atan2(def.x, def.y);
+                        float angle = rad*Mathf.Rad2Deg;
+                        Vector3 rot = new Vector3(0, angle, 0);
+                        Quaternion qua = Quaternion.Euler(rot);
+
+                        arrow.localRotation = qua;
+                        arrow.transform.position = bialaBila.transform.position;
+
+                        Vector3 endPos = Camera.main.ScreenToWorldPoint(Input.mousePosition) + Vector3.forward;
+                        lineRenderer.SetPosition(1, endPos);
+
+                    }
+
+                    if (Input.GetMouseButtonUp(0) == true)
+                    {
+                        Vector2 upPosition = Input.mousePosition;
+
+                        Vector2 def = mousePosition - upPosition;
+                        Vector2 add = new Vector2(def.x, def.y);
+
+                        bialaRigid.AddForce(add*power);
+                        arrow.gameObject.SetActive(false);
+
+                        lineRenderer.enabled = false;
+                    }
+                }
+
+        }
+
+        if (!sprite.enabled & !bilewruchu)
+        {
+            bialaBila.transform.position = respawnposition;
+            sprite.enabled = true;
+            collider.enabled = true;
+        }
 
     }
+
 }
