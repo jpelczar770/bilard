@@ -1,16 +1,20 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Hole : MonoBehaviour
 {
 	public GameObject biala_bila;
     Vector2 zero = new Vector2 (0,0);
+	public manager_luz man;
+
 
 	void OnTriggerEnter2D(Collider2D other) {
 	    if (other.tag == "bila")
 	    {
 	        Rigidbody2D rigid = other.GetComponent<Rigidbody2D>();
 	        rigid.velocity = zero;
-	        other.gameObject.SetActive(false);
+			man.wbita(other.gameObject);
+
 		}
 
 		if (other.tag == "biala_bila")
@@ -23,6 +27,5 @@ public class Hole : MonoBehaviour
 	        collider.enabled = false;
 		}
 	}
-
 
 }

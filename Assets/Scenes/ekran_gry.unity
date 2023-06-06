@@ -286,8 +286,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 55645240}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 11.9, z: 0}
-  m_LocalScale: {x: 2.362513, y: 2.362513, z: 2.362513}
+  m_LocalPosition: {x: 0, y: 11.899998, z: 0}
+  m_LocalScale: {x: 2.3625126, y: 2.3625126, z: 2.3625126}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 750804917}
@@ -322,6 +322,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   biala_bila: {fileID: 1009676069}
+  man: {fileID: 750804918}
 --- !u!1 &178704363 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5237074314778473101, guid: f971aad248883d9438e3495472b59a31, type: 3}
@@ -982,6 +983,37 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 18.710308, y: 2.959364}
   m_EdgeRadius: 0
+--- !u!1 &631262605
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 631262606}
+  m_Layer: 0
+  m_Name: wbite
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &631262606
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631262605}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -27.1, y: 14.9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &750804916
 GameObject:
   m_ObjectHideFlags: 0
@@ -991,6 +1023,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 750804917}
+  - component: {fileID: 750804918}
   m_Layer: 0
   m_Name: "\u0141uzy"
   m_TagString: Untagged
@@ -1019,6 +1052,19 @@ Transform:
   m_Father: {fileID: 1498927334}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &750804918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 750804916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f548ed696ed55a5489678c29ab1b4639, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pozycja: {fileID: 631262606}
 --- !u!1 &764531694 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9165615375661169325, guid: 949d661d71791cb49aa7a4652f9caf72, type: 3}
@@ -1232,8 +1278,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 856558807}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -22.8, y: 11.9, z: 0}
-  m_LocalScale: {x: 2.362513, y: 2.362513, z: 2.362513}
+  m_LocalPosition: {x: -22.8, y: 11.899998, z: 0}
+  m_LocalScale: {x: 2.3625126, y: 2.3625126, z: 2.3625126}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 750804917}
@@ -1268,6 +1314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   biala_bila: {fileID: 1009676069}
+  man: {fileID: 750804918}
 --- !u!1 &887793240
 GameObject:
   m_ObjectHideFlags: 0
@@ -1440,6 +1487,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   biala_bila: {fileID: 1009676069}
+  man: {fileID: 750804918}
 --- !u!1 &1009676069 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8923893015692637367, guid: edc3844f932b0ff4c997ec7b7ff3b3bb, type: 3}
@@ -1623,8 +1671,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1370639509}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 22.8, y: 11.9, z: 0}
-  m_LocalScale: {x: 2.362513, y: 2.362513, z: 2.362513}
+  m_LocalPosition: {x: 22.8, y: 11.899998, z: 0}
+  m_LocalScale: {x: 2.3625126, y: 2.3625126, z: 2.3625126}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 750804917}
@@ -1659,6 +1707,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   biala_bila: {fileID: 1009676069}
+  man: {fileID: 750804918}
 --- !u!1 &1498927333
 GameObject:
   m_ObjectHideFlags: 0
@@ -2007,7 +2056,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.20784314, g: 0.22745098, b: 0.3019608, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -2134,7 +2183,7 @@ Transform:
   m_GameObject: {fileID: 1983052364}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -22.8, y: -11.9, z: 0}
-  m_LocalScale: {x: 2.362513, y: 2.362513, z: 2.362513}
+  m_LocalScale: {x: 2.3625126, y: 2.3625126, z: 2.3625126}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 750804917}
@@ -2169,6 +2218,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   biala_bila: {fileID: 1009676069}
+  man: {fileID: 750804918}
 --- !u!1 &1988889643
 GameObject:
   m_ObjectHideFlags: 0
@@ -2248,7 +2298,7 @@ Transform:
   m_GameObject: {fileID: 1988889643}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 22.8, y: -11.9, z: 0}
-  m_LocalScale: {x: 2.362513, y: 2.362513, z: 2.362513}
+  m_LocalScale: {x: 2.3625126, y: 2.3625126, z: 2.3625126}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 750804917}
@@ -2283,6 +2333,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   biala_bila: {fileID: 1009676069}
+  man: {fileID: 750804918}
 --- !u!1 &2056396296
 GameObject:
   m_ObjectHideFlags: 0
