@@ -58,7 +58,7 @@ public class BallController : MonoBehaviour
         bool bilewruchu = false;
         foreach (Rigidbody2D bila in ballList)
         {
-           if (bila.velocity.magnitude < 1)
+           if (bila.velocity.magnitude < 1.25)
             {
                 bila.velocity = zero;
             }
@@ -70,7 +70,7 @@ public class BallController : MonoBehaviour
 
         if (bialaBila.activeSelf == true)
         {
-            if (bialaRigid.velocity.magnitude < 1)
+            if (bialaRigid.velocity.magnitude < 1.25)
             {
                 bialaRigid.velocity = zero;
             }

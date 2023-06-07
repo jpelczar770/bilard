@@ -1007,7 +1007,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 631262605}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -27.1, y: 14.9, z: 0}
+  m_LocalPosition: {x: -24.7, y: 14.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1935,6 +1935,20 @@ Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 1240673089045229067, guid: 1cb3277aa52dc824f8bf7a69c283ab95, type: 3}
   m_PrefabInstance: {fileID: 1240673087560762009}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1755262104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1755262096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ee7968996cfd054dbfff0a8e9c8e3d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  biala_bila: {fileID: 0}
+  man: {fileID: 0}
 --- !u!1 &1813678537
 GameObject:
   m_ObjectHideFlags: 0
@@ -2617,6 +2631,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: czarna bila
       objectReference: {fileID: 0}
+    - target: {fileID: 1240673089045229065, guid: 1cb3277aa52dc824f8bf7a69c283ab95, type: 3}
+      propertyPath: m_TagString
+      value: czarna_bila
+      objectReference: {fileID: 0}
     - target: {fileID: 1240673089045229067, guid: 1cb3277aa52dc824f8bf7a69c283ab95, type: 3}
       propertyPath: m_Mass
       value: 0.2
@@ -2904,6 +2922,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bila 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2187659283237986793, guid: 3d5dba2e0b8dccb4bb98a28d352a3030, type: 3}
+      propertyPath: m_TagString
+      value: "pe\u0142ne"
+      objectReference: {fileID: 0}
     - target: {fileID: 2187659283237986795, guid: 3d5dba2e0b8dccb4bb98a28d352a3030, type: 3}
       propertyPath: m_Mass
       value: 0.2
@@ -3000,6 +3022,10 @@ PrefabInstance:
     - target: {fileID: 3223048300577157556, guid: 4864027b76739374282d451c4e2539a5, type: 3}
       propertyPath: m_Name
       value: bila 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3223048300577157556, guid: 4864027b76739374282d451c4e2539a5, type: 3}
+      propertyPath: m_TagString
+      value: "pe\u0142ne"
       objectReference: {fileID: 0}
     - target: {fileID: 3223048300577157557, guid: 4864027b76739374282d451c4e2539a5, type: 3}
       propertyPath: m_Material
@@ -3248,6 +3274,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bila 6
       objectReference: {fileID: 0}
+    - target: {fileID: 5237074314778473101, guid: f971aad248883d9438e3495472b59a31, type: 3}
+      propertyPath: m_TagString
+      value: "pe\u0142ne"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f971aad248883d9438e3495472b59a31, type: 3}
 --- !u!1001 &5706815964412161938
@@ -3260,6 +3290,10 @@ PrefabInstance:
     - target: {fileID: 5706815965638047529, guid: 68ad0069814ca3541b7ec304e1271f94, type: 3}
       propertyPath: m_Name
       value: bila 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5706815965638047529, guid: 68ad0069814ca3541b7ec304e1271f94, type: 3}
+      propertyPath: m_TagString
+      value: "pe\u0142ne"
       objectReference: {fileID: 0}
     - target: {fileID: 5706815965638047533, guid: 68ad0069814ca3541b7ec304e1271f94, type: 3}
       propertyPath: m_RootOrder
@@ -3343,6 +3377,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bila 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6854026889030617144, guid: ca1174cc3f22cd44999d420a04d37a23, type: 3}
+      propertyPath: m_TagString
+      value: "pe\u0142ne"
+      objectReference: {fileID: 0}
     - target: {fileID: 6854026889030617148, guid: ca1174cc3f22cd44999d420a04d37a23, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -3423,6 +3461,10 @@ PrefabInstance:
     - target: {fileID: 8193769472063315742, guid: e216d23c2b20db34dbe63ad9cbde5c4f, type: 3}
       propertyPath: m_Name
       value: bila 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8193769472063315742, guid: e216d23c2b20db34dbe63ad9cbde5c4f, type: 3}
+      propertyPath: m_TagString
+      value: "pe\u0142ne"
       objectReference: {fileID: 0}
     - target: {fileID: 8193769472063315743, guid: e216d23c2b20db34dbe63ad9cbde5c4f, type: 3}
       propertyPath: m_Material
@@ -3795,6 +3837,10 @@ PrefabInstance:
     - target: {fileID: 9165615375661169325, guid: 949d661d71791cb49aa7a4652f9caf72, type: 3}
       propertyPath: m_Name
       value: bila 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165615375661169325, guid: 949d661d71791cb49aa7a4652f9caf72, type: 3}
+      propertyPath: m_TagString
+      value: "pe\u0142ne"
       objectReference: {fileID: 0}
     - target: {fileID: 9165615375661169329, guid: 949d661d71791cb49aa7a4652f9caf72, type: 3}
       propertyPath: m_RootOrder

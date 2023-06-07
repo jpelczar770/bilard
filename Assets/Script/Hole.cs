@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Hole : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class Hole : MonoBehaviour
 
 
 	void OnTriggerEnter2D(Collider2D other) {
-	    if (other.tag == "bila")
+	    if (other.tag == "pe³ne" | other.tag == "po³ówki") 
 	    {
 	        Rigidbody2D rigid = other.GetComponent<Rigidbody2D>();
 	        rigid.velocity = zero;
@@ -25,6 +26,11 @@ public class Hole : MonoBehaviour
 	        rigid.velocity = zero;
 	        sprite.enabled = false;
 	        collider.enabled = false;
+		}
+
+		if (other.tag == "czarna_bila")
+        {
+			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 		}
 	}
 
