@@ -17,7 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/szuk_przeciwnika.unity
     guid: e2bd4e6df907ef94bb23dc661cad555b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ladowanie_gry.unity
     guid: 9baf45eaa34e6494390cff65bc28f922
+  - enabled: 1
+    path: Assets/Scenes/ekran_gry.unity
+    guid: da704ec15a1e34a4a8f7936c86a43188
   m_configObjects: {}

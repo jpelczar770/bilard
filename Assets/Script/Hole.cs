@@ -1,22 +1,31 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Hole : MonoBehaviour
 {
 	public GameObject biala_bila;
+    Vector2 zero = new Vector2 (0,0);
+	public manager_luz man;
 
-    public Vector3 position = new Vector3 (-11,0,-0.5f);
 
 	void OnTriggerEnter2D(Collider2D other) {
-		if (other.gameObject.tag == "bila") {
-		    Debug.Log("Hit: " + other.transform.name);
-		    other.gameObject.SetActive(false);
-		    Debug.Log(other.gameObject);
+	    if (other.tag == "bila")
+	    {
+	        Rigidbody2D rigid = other.GetComponent<Rigidbody2D>();
+	        rigid.velocity = zero;
+			man.wbita(other.gameObject);
+
 		}
 
-		if (other.gameObject.name == "biala_bila") {
-		    Instantiate(biala_bila, position, Quaternion.identity);
-	        other.gameObject.SetActive(false);
+		if (other.tag == "biala_bila")
+		{
+		    Rigidbody2D rigid = other.GetComponent<Rigidbody2D>();
+		    SpriteRenderer sprite = other.GetComponent<SpriteRenderer>();
+		    CircleCollider2D collider = other.GetComponent<CircleCollider2D>();
+	        rigid.velocity = zero;
+	        sprite.enabled = false;
+	        collider.enabled = false;
 		}
-
 	}
+
 }
