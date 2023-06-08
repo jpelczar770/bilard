@@ -17,7 +17,7 @@ namespace Mirror.Examples.Pong
         public Transform rightRacketSpawn;
         GameObject ball;
 
-        public override void OnServerAddPlayer(NetworkConnectionToClient conn)
+        public override void OnServerAddPlayer(NetworkConnection conn)
         {
             // add player at correct spawn position
             Transform start = numPlayers == 0 ? leftRacketSpawn : rightRacketSpawn;
@@ -32,7 +32,7 @@ namespace Mirror.Examples.Pong
             }
         }
 
-        public override void OnServerDisconnect(NetworkConnectionToClient conn)
+        public override void OnServerDisconnect(NetworkConnection conn)
         {
             // destroy ball
             if (ball != null)
