@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//using UnityEngine.UI;
 
 public class BallController : MonoBehaviour
 {
-
+//    public Text player;
     public Material material;
+    public int liczba_inst = 0;
     public float startWidth = 0.2f;
     public float endWidth = 0.0f;
     public Color startColour = Color.white;
@@ -29,6 +31,10 @@ public class BallController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Display the capture text with the player's name
+  //      player.text = "Player1";
+    //    player.gameObject.SetActive(true);
+
         bialaRigid = bialaBila.GetComponent<Rigidbody2D>();
         sprite = bialaBila.GetComponent<SpriteRenderer>();
         collider = bialaBila.GetComponent<CircleCollider2D>();
@@ -70,6 +76,7 @@ public class BallController : MonoBehaviour
 
         if (bialaBila.activeSelf == true)
         {
+            liczba_inst += 1;
             if (bialaRigid.velocity.magnitude < 1.25)
             {
                 bialaRigid.velocity = zero;
@@ -133,5 +140,5 @@ public class BallController : MonoBehaviour
         }
 
     }
-
+    
 }

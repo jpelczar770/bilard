@@ -8,6 +8,8 @@ TagManager:
   - bila
   - "\u0142uza"
   - biala_bila
+  - half
+  - cala
   layers:
   - Default
   - TransparentFX
