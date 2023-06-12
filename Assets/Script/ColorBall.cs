@@ -13,7 +13,7 @@ public class ColorBall : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision) {
 
-	    if (collision.gameObject.tag == "stol")
+	    if (collision.gameObject.tag == "stół")
 	    {
             stol.Play();
 		}
