@@ -11,6 +11,7 @@ public class BallController : MonoBehaviour
     public Color startColour = Color.white;
     public Color endColour = Color.clear;
     public Vector3 respawnposition = new Vector3 (-11,0,-0.5f);
+    public AudioSource kij;
 
     private LineRenderer lineRenderer;
 
@@ -34,6 +35,7 @@ public class BallController : MonoBehaviour
         collider = bialaBila.GetComponent<CircleCollider2D>();
         bialaBilaDefaultPosition = bialaBila.transform.localPosition;
         arrow.gameObject.SetActive(false);
+        kij = GetComponent<AudioSource>();
 
         // Get a reference for our line renderer, or add one if not present.
         lineRenderer = GetComponent<LineRenderer>();
@@ -58,7 +60,7 @@ public class BallController : MonoBehaviour
         bool bilewruchu = false;
         foreach (Rigidbody2D bila in ballList)
         {
-           if (bila.velocity.magnitude < 1)
+           if (bila.velocity.magnitude < 1.25)
             {
                 bila.velocity = zero;
             }
@@ -70,7 +72,7 @@ public class BallController : MonoBehaviour
 
         if (bialaBila.activeSelf == true)
         {
-            if (bialaRigid.velocity.magnitude < 1)
+            if (bialaRigid.velocity.magnitude < 1.25)
             {
                 bialaRigid.velocity = zero;
             }
@@ -120,6 +122,7 @@ public class BallController : MonoBehaviour
                         arrow.gameObject.SetActive(false);
 
                         lineRenderer.enabled = false;
+                        kij.Play();
                     }
                 }
 
