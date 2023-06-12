@@ -42,7 +42,7 @@ git pull
 ## Jak dodać zaktualizowaną grę na itch.io?
 
 1. Otwieramy projekt w Unity i wybieramy File -> Build Settings.
-2. Wybieramy w Platfrom WebGL, wybieramy sceny, które chcemy zbudować i wchodząc w Player Settings, wybieramy Disabled w Compression Format, a następnie klikmay Build.
+2. Wybieramy w Platfrom WebGL, wybieramy sceny, które chcemy zbudować i wchodząc w Player Settings, wybieramy Disabled w Compression Format, a następnie klikamy Build.
 3. Robimy .zip ze wszystkich plików w folderze, który powstał. 
 4. Wchodzimy na itch.io, edytujemy nasz projekt (lub Upload New Project, Kind of project->HTML).
 5. Następnie wybieramy Upload files, dodajemy nasz plik .zip i zaznaczamy opcję 'This file will be played in browser'. 
