@@ -8,20 +8,21 @@ public class BallController_tury : MonoBehaviour
 {
     public TMP_Text gracz_text;
     public string player;
-    public Material material;
     public int liczba_inst = 0;
+    public Material material;
     public float startWidth = 0.2f;
     public float endWidth = 0.0f;
     public Color startColour = Color.white;
     public Color endColour = Color.clear;
     public Vector3 respawnposition = new Vector3(-11, 0, -0.5f);
+
     public manager_luz_tury man;
     public bool przed_ruchem;
 
     /// <summary>
     /// //////////////
     /// </summary>
-    public int turka = 0;
+    public int turka;
 
     private LineRenderer lineRenderer;
 
@@ -31,22 +32,24 @@ public class BallController_tury : MonoBehaviour
     [SerializeField] List<Rigidbody2D>ballList = new List<Rigidbody2D>();
 
     Vector2 mousePosition = new Vector2();
-    Vector2 zero = new Vector2 (0,0);
+    Vector2 zero = new Vector2(0, 0);
     Rigidbody2D bialaRigid = null;
     SpriteRenderer sprite = null;
-    CircleCollider2D ballCollider = null;
+    CircleCollider2D collider = null;
     Vector2 bialaBilaDefaultPosition = new Vector2();
+    public int kot;
 
     public void Tura(int tura)
-    {       if (tura == 0)
+    {
+        turka = tura;
+        if (tura == 0)
             { 
                     player = "player1";
-                    turka = 1; 
              }
-            else if (tura == 1) {
+            else if (tura == 1)
+        {
                  player = "player2";
-                 turka = 0; }
-             przed_ruchem = true;
+        }
         gracz_text.text = player;
     }
     
@@ -54,18 +57,21 @@ public class BallController_tury : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Tura(turka);
+        przed_ruchem = true;
+        gracz_text.text = "player2";
+        turka = 1;
         // Display the capture text with the player's name
 
         bialaRigid = bialaBila.GetComponent<Rigidbody2D>();
         sprite = bialaBila.GetComponent<SpriteRenderer>();
-        ballCollider = bialaBila.GetComponent<CircleCollider2D>();
+        collider = bialaBila.GetComponent<CircleCollider2D>();
         bialaBilaDefaultPosition = bialaBila.transform.localPosition;
         arrow.gameObject.SetActive(false);
 
         // Get a reference for our line renderer, or add one if not present.
         lineRenderer = GetComponent<LineRenderer>();
-        if (lineRenderer == null) {
+        if (lineRenderer == null)
+        {
             lineRenderer = gameObject.AddComponent<LineRenderer>();
         }
 
@@ -80,10 +86,10 @@ public class BallController_tury : MonoBehaviour
         lineRenderer.numCapVertices = 20;
     }
 
+
     // Update is called once per frame
     void Update()
-    {   
-        
+    {
         bool bilewruchu = false;
         foreach (Rigidbody2D bila in ballList)
         {
@@ -111,7 +117,10 @@ public class BallController_tury : MonoBehaviour
 
                 if (!bilewruchu)
                 {
-                if (przed_ruchem && man.wbitawruchu == false)
+                kot += 1;
+                Debug.Log(turka);
+                Tura(turka);
+                if (man.wbitawruchu == false && kot == 5 && liczba_inst != 0)
                 {
                     if (turka == 0)
                     { Tura(1); }
@@ -148,7 +157,7 @@ public class BallController_tury : MonoBehaviour
 
                     if (Input.GetMouseButtonUp(0) == true)
                     { //puszczenie kijka
-                        przed_ruchem = false;
+                    kot = 0;
                         liczba_inst += 1;
                         man.wbitawruchu = false;
                         
@@ -170,7 +179,7 @@ public class BallController_tury : MonoBehaviour
         {
             bialaBila.transform.position = respawnposition;
             sprite.enabled = true;
-            ballCollider.enabled = true;
+            collider.enabled = true;
         }
 
     }

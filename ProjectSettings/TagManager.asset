@@ -10,6 +10,8 @@ TagManager:
   - biala_bila
   - half
   - cala
+  - "po\u0142\xF3wki"
+  - "pe\u0142ne"
   layers:
   - Default
   - TransparentFX

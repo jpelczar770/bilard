@@ -36,15 +36,19 @@ public class manager_luz_tury : MonoBehaviour
             { 
                 Kula_2 = "po³ówki"; 
             }
-            if (ref_BC.liczba_inst % 2 != 0)
+            if (kula.tag == "po³ówki")
             {
-                player1Tag = kula.tag;
-                player2Tag = Kula_2;
+                Kula_2 = "pe³ne";
             }
-            else if (ref_BC.liczba_inst % 2 == 0)
+            if (ref_BC.liczba_inst % 2 != 0)
             {
                 player2Tag = kula.tag;
                 player1Tag = Kula_2;
+            }
+            else if (ref_BC.liczba_inst % 2 == 0)
+            {
+                player1Tag = kula.tag;
+                player2Tag = Kula_2;
             }
         }
 
