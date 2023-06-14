@@ -15,7 +15,6 @@ public class Hole : MonoBehaviour
 		luza = GetComponent<AudioSource>();
 	}
 
-
 	void OnTriggerEnter2D(Collider2D other) {
 	    if (other.tag == "pe³ne" || other.tag == "po³ówki")
 	    {
