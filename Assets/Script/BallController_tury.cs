@@ -125,7 +125,10 @@ public class BallController_tury : MonoBehaviour
                 if (!bilewruchu)
                 {
                 kot += 1;
-                Tura(turka);
+                if (man.wbitawruchu)
+                {
+                    Tura(turka);
+                }
                 if (man.wbitawruchu == false && kot == 5 && liczba_inst != 0)
                 {
                     if (turka == 0)
@@ -172,6 +175,13 @@ public class BallController_tury : MonoBehaviour
                     hole3.wbitaprzeciwna = false;
                     hole4.wbitaprzeciwna = false;
                     hole5.wbitaprzeciwna = false;
+                    hole.czypierwsza = true;
+                    hole1.czypierwsza = true;
+                    hole2.czypierwsza = true;
+                    hole3.czypierwsza = true;
+                    hole4.czypierwsza = true;
+                    hole5.czypierwsza = true;
+
 
 
                     Vector2 upPosition = Input.mousePosition;
