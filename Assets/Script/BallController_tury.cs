@@ -39,17 +39,23 @@ public class BallController_tury : MonoBehaviour
     CircleCollider2D collider = null;
     Vector2 bialaBilaDefaultPosition = new Vector2();
     public int kot;
+    public Hole hole;
+    public Hole hole1;
+    public Hole hole2;
+    public Hole hole3;
+    public Hole hole4;
+    public Hole hole5;
 
     public void Tura(int tura)
     {
         turka = tura;
         if (tura == 0)
             { 
-                    player = PlayerPrefs.GetString("name1");
+                    player = "ruch: " + PlayerPrefs.GetString("name1");
              }
             else if (tura == 1)
         {
-                 player = PlayerPrefs.GetString("name2");
+                 player = "ruch: " + PlayerPrefs.GetString("name2");
         }
         gracz_text.text = player;
     }
@@ -119,7 +125,6 @@ public class BallController_tury : MonoBehaviour
                 if (!bilewruchu)
                 {
                 kot += 1;
-                Debug.Log(turka);
                 Tura(turka);
                 if (man.wbitawruchu == false && kot == 5 && liczba_inst != 0)
                 {
@@ -158,12 +163,18 @@ public class BallController_tury : MonoBehaviour
 
                     if (Input.GetMouseButtonUp(0) == true)
                     { //puszczenie kijka
-                    kot = 0;
+                        kot = 0;
                         liczba_inst += 1;
                         man.wbitawruchu = false;
+                        hole.wbitaprzeciwna = false;
+                    hole1.wbitaprzeciwna = false;
+                    hole2.wbitaprzeciwna = false;
+                    hole3.wbitaprzeciwna = false;
+                    hole4.wbitaprzeciwna = false;
+                    hole5.wbitaprzeciwna = false;
 
-                        
-                        Vector2 upPosition = Input.mousePosition;
+
+                    Vector2 upPosition = Input.mousePosition;
 
                         Vector2 def = mousePosition - upPosition;
                         Vector2 add = new Vector2(def.x, def.y);
