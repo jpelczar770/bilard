@@ -1603,7 +1603,6 @@ GameObject:
   - component: {fileID: 429973529}
   - component: {fileID: 429973528}
   - component: {fileID: 429973527}
-  - component: {fileID: 429973530}
   m_Layer: 5
   m_Name: Start.przycisk
   m_TagString: Untagged
@@ -1676,9 +1675,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1304058593}
-        m_TargetAssemblyTypeName: StartGry1, Assembly-CSharp
-        m_MethodName: StartBilarda
+      - m_Target: {fileID: 443334446}
+        m_TargetAssemblyTypeName: SaveName, Assembly-CSharp
+        m_MethodName: clickSaveButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1726,18 +1725,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 429973525}
   m_CullTransparentMesh: 1
---- !u!114 &429973530
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 429973525}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 538e2d3905deb824792fa771540c5ff3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &443334442
 GameObject:
   m_ObjectHideFlags: 0
@@ -1749,6 +1736,7 @@ GameObject:
   - component: {fileID: 443334445}
   - component: {fileID: 443334444}
   - component: {fileID: 443334443}
+  - component: {fileID: 443334446}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1822,6 +1810,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &443334446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443334442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9b88e1709c466d40b3e1417d62c14c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textBox1: {fileID: 2003450870}
+  textBox2: {fileID: 1602651091}
 --- !u!1 &449135037
 GameObject:
   m_ObjectHideFlags: 0
@@ -2131,8 +2133,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2466,8 +2468,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4280634768
-  m_fontColor: {r: 0.5647059, g: 0.3019608, b: 0.14509805, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2830,8 +2832,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4280634768
-  m_fontColor: {r: 0.5647059, g: 0.3019608, b: 0.14509805, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3831,8 +3833,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4280701081
-  m_fontColor: {r: 0.6, g: 0.3137255, b: 0.14901961, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -5330,8 +5332,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4280634768
-  m_fontColor: {r: 0.5647059, g: 0.3019608, b: 0.14509805, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
