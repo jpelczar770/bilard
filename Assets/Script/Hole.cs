@@ -12,7 +12,7 @@ public class Hole : MonoBehaviour
 	public BallController_tury ref_BC;
 	void Start()
 	{
-		luza = GetComponent<AudioSource>();
+		
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {

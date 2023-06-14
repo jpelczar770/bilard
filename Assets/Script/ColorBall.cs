@@ -7,8 +7,7 @@ public class ColorBall : MonoBehaviour
 
     void Start()
     {
-        uderzenie = GetComponent<AudioSource>();
-        stol = GetComponent<AudioSource>();
+        
     }
 
     void OnCollisionEnter2D(Collision2D collision)
