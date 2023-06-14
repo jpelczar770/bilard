@@ -15,6 +15,7 @@ public class BallController_tury : MonoBehaviour
     public Color startColour = Color.white;
     public Color endColour = Color.clear;
     public Vector3 respawnposition = new Vector3(-11, 0, -0.5f);
+    public AudioSource kij;
 
     public manager_luz_tury man;
     public bool przed_ruchem;
@@ -67,6 +68,7 @@ public class BallController_tury : MonoBehaviour
         collider = bialaBila.GetComponent<CircleCollider2D>();
         bialaBilaDefaultPosition = bialaBila.transform.localPosition;
         arrow.gameObject.SetActive(false);
+        kij = GetComponent<AudioSource>();
 
         // Get a reference for our line renderer, or add one if not present.
         lineRenderer = GetComponent<LineRenderer>();
@@ -160,6 +162,7 @@ public class BallController_tury : MonoBehaviour
                     kot = 0;
                         liczba_inst += 1;
                         man.wbitawruchu = false;
+
                         
                         Vector2 upPosition = Input.mousePosition;
 
@@ -170,7 +173,8 @@ public class BallController_tury : MonoBehaviour
                         arrow.gameObject.SetActive(false);
 
                         lineRenderer.enabled = false;
-                    }
+                        kij.Play();
+                }
                 }
 
         }

@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ekran_gry.unity
     guid: da704ec15a1e34a4a8f7936c86a43188
+  - enabled: 1
+    path: Assets/Scenes/Game_over.unity
+    guid: a99c8f1d776e8104d9c33f806562972e
   m_configObjects: {}
