@@ -9,6 +9,7 @@ public class Hole : MonoBehaviour
 	public manager_luz_tury man;
 	public AudioSource luza;
 	public bool wbitaprzeciwna;
+	public bool czypierwsza;
 
 	public BallController_tury ref_BC;
 	void Start()
@@ -23,15 +24,17 @@ public class Hole : MonoBehaviour
 	        rigid.velocity = zero;
 			man.wbita(other.gameObject);
 			luza.Play();
-			if (ref_BC.turka == 0 && ((other.tag == "pe³ne" && man.player1Tag == "po³ówki") || (other.tag == "po³ówki" && man.player1Tag == "pe³ne")) && wbitaprzeciwna == false)
-			{ 
+			if (ref_BC.turka == 0 && ((other.tag == "pe³ne" && man.player1Tag == "po³ówki") || (other.tag == "po³ówki" && man.player1Tag == "pe³ne")) && wbitaprzeciwna == false && czypierwsza)
+			{
 				ref_BC.turka = 1;
 				wbitaprzeciwna = true;
+				czypierwsza = false;
 			}
-			else if (ref_BC.turka == 1 && ((other.tag == "pe³ne" && man.player2Tag == "pó³owki") || (other.tag == "po³ówki" && man.player2Tag == "pe³ne")) && wbitaprzeciwna == false)
-			{ 
+			else if (ref_BC.turka == 1 && ((other.tag == "pe³ne" && man.player2Tag == "pó³owki") || (other.tag == "po³ówki" && man.player2Tag == "pe³ne")) && wbitaprzeciwna == false && czypierwsza)
+			{
 				ref_BC.turka = 0;
 				wbitaprzeciwna = true;
+				czypierwsza = false;
 			}
 		}
 
@@ -45,14 +48,16 @@ public class Hole : MonoBehaviour
 	        sprite.enabled = false;
 			collider.enabled = false;
 			if (ref_BC.turka == 0 && wbitaprzeciwna == false)
-			{ 
-				ref_BC.Tura(1);
+			{
+				ref_BC.turka = 1;
 				wbitaprzeciwna = true;
+				man.wbitawruchu = true;
 			}
 			else if (ref_BC.turka == 1 && wbitaprzeciwna == false)
-			{ 
-				ref_BC.Tura(0); 
+			{
+				ref_BC.turka = 0;
 				wbitaprzeciwna = true;
+				man.wbitawruchu = true;
 			}
 		}
 
