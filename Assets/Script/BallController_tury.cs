@@ -45,11 +45,11 @@ public class BallController_tury : MonoBehaviour
         turka = tura;
         if (tura == 0)
             { 
-                    player = "player1";
+                    player = PlayerPrefs.GetString("name1");
              }
             else if (tura == 1)
         {
-                 player = "player2";
+                 player = PlayerPrefs.GetString("name2");
         }
         gracz_text.text = player;
     }
@@ -59,7 +59,7 @@ public class BallController_tury : MonoBehaviour
     void Start()
     {
         przed_ruchem = true;
-        gracz_text.text = "player2";
+        gracz_text.text = PlayerPrefs.GetString("name2");
         turka = 1;
         // Display the capture text with the player's name
 
