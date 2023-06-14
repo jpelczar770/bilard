@@ -8,6 +8,7 @@ public class Hole : MonoBehaviour
     Vector2 zero = new Vector2 (0,0);
 	public manager_luz_tury man;
 	public AudioSource luza;
+	public bool wbitaprzeciwna;
 
 	public BallController_tury ref_BC;
 	void Start()
@@ -22,21 +23,37 @@ public class Hole : MonoBehaviour
 	        rigid.velocity = zero;
 			man.wbita(other.gameObject);
 			luza.Play();
-			if (ref_BC.turka == 0 && ((other.tag == "pe³ne" && man.player1Tag == "po³ówki") || (other.tag == "po³ówki" && man.player1Tag == "pe³ne")))
-			{ ref_BC.turka = 1; }
-			else if (ref_BC.turka == 1 && ((other.tag == "pe³ne" && man.player2Tag == "pó³owki") || (other.tag == "po³ówki" && man.player2Tag == "pe³ne")))
-			{ ref_BC.turka = 0; }
+			if (ref_BC.turka == 0 && ((other.tag == "pe³ne" && man.player1Tag == "po³ówki") || (other.tag == "po³ówki" && man.player1Tag == "pe³ne")) && wbitaprzeciwna == false)
+			{ 
+				ref_BC.turka = 1;
+				wbitaprzeciwna = true;
+			}
+			else if (ref_BC.turka == 1 && ((other.tag == "pe³ne" && man.player2Tag == "pó³owki") || (other.tag == "po³ówki" && man.player2Tag == "pe³ne")) && wbitaprzeciwna == false)
+			{ 
+				ref_BC.turka = 0;
+				wbitaprzeciwna = true;
+			}
 		}
 
 		if (other.tag == "biala_bila")
 		{
-		    Rigidbody2D rigid = other.GetComponent<Rigidbody2D>();
+			Rigidbody2D rigid = other.GetComponent<Rigidbody2D>();
 		    SpriteRenderer sprite = other.GetComponent<SpriteRenderer>();
 		    CircleCollider2D collider = other.GetComponent<CircleCollider2D>();
 			luza.Play();
 			rigid.velocity = zero;
 	        sprite.enabled = false;
-	        collider.enabled = false;
+			collider.enabled = false;
+			if (ref_BC.turka == 0 && wbitaprzeciwna == false)
+			{ 
+				ref_BC.Tura(1);
+				wbitaprzeciwna = true;
+			}
+			else if (ref_BC.turka == 1 && wbitaprzeciwna == false)
+			{ 
+				ref_BC.Tura(0); 
+				wbitaprzeciwna = true;
+			}
 		}
 
 		if (other.tag == "czarna_bila")
