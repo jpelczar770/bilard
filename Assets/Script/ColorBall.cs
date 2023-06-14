@@ -5,22 +5,23 @@ public class ColorBall : MonoBehaviour
     public AudioSource uderzenie;
     public AudioSource stol;
 
-     void Start()
+    void Start()
     {
         uderzenie = GetComponent<AudioSource>();
         stol = GetComponent<AudioSource>();
     }
 
-    void OnCollisionEnter2D(Collision2D collision) {
+    void OnCollisionEnter2D(Collision2D collision)
+    {
 
-	    if (collision.gameObject.tag == "st√≥≈Ç")
-	    {
+        if (collision.gameObject.tag == "stÛ≥")
+        {
             stol.Play();
-		}
+        }
 
-		if (collision.gameObject.tag == "pe≈Çne" | collision.gameObject.tag == "po≈Ç√≥wki" | collision.gameObject.tag == "biala_bila")
-	    {
+        if (collision.gameObject.tag == "pe≥ne" || collision.gameObject.tag == "po≥Ûwki" || collision.gameObject.tag == "biala_bila"|| collision.gameObject.tag == "czarna_bila")
+        {
             uderzenie.Play();
-		}
-	}
+        }
+    }
 }

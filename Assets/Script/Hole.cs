@@ -1,24 +1,31 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Hole : MonoBehaviour
 {
 	public GameObject biala_bila;
     Vector2 zero = new Vector2 (0,0);
-	public manager_luz man;
-    public AudioSource luza;
+	public manager_luz_tury man;
+	public AudioSource luza;
 
-    void Start() {
-    luza = GetComponent<AudioSource>();
-    }
+	public BallController_tury ref_BC;
+	void Start()
+	{
+		luza = GetComponent<AudioSource>();
+	}
 
 	void OnTriggerEnter2D(Collider2D other) {
-	    if (other.tag == "pe≈Çne" | other.tag == "po≈Ç√≥wki")
+	    if (other.tag == "pe≥ne" || other.tag == "po≥Ûwki")
 	    {
 	        Rigidbody2D rigid = other.GetComponent<Rigidbody2D>();
 	        rigid.velocity = zero;
 			man.wbita(other.gameObject);
-            luza.Play();
+			luza.Play();
+			if (ref_BC.turka == 0 && ((other.tag == "pe≥ne" && man.player1Tag == "po≥Ûwki") || (other.tag == "po≥Ûwki" && man.player1Tag == "pe≥ne")))
+			{ ref_BC.turka = 1; }
+			else if (ref_BC.turka == 1 && ((other.tag == "pe≥ne" && man.player2Tag == "pÛ≥owki") || (other.tag == "po≥Ûwki" && man.player2Tag == "pe≥ne")))
+			{ ref_BC.turka = 0; }
 		}
 
 		if (other.tag == "biala_bila")
@@ -26,10 +33,16 @@ public class Hole : MonoBehaviour
 		    Rigidbody2D rigid = other.GetComponent<Rigidbody2D>();
 		    SpriteRenderer sprite = other.GetComponent<SpriteRenderer>();
 		    CircleCollider2D collider = other.GetComponent<CircleCollider2D>();
-	        rigid.velocity = zero;
+			luza.Play();
+			rigid.velocity = zero;
 	        sprite.enabled = false;
 	        collider.enabled = false;
-	        luza.Play();
+		}
+
+		if (other.tag == "czarna_bila")
+		{
+			luza.Play();
+			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 		}
 	}
 

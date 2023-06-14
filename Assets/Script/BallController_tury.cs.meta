@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: d4ccff018efdeb54381f15d36baa74ef
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - gracz_text: {instanceID: 0}
+  - material: {instanceID: 0}
+  - man: {instanceID: 0}
+  - bialaBila: {fileID: 8923893015692637367, guid: edc3844f932b0ff4c997ec7b7ff3b3bb, type: 3}
+  - arrow: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
