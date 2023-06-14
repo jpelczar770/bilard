@@ -68,7 +68,6 @@ public class BallController_tury : MonoBehaviour
         collider = bialaBila.GetComponent<CircleCollider2D>();
         bialaBilaDefaultPosition = bialaBila.transform.localPosition;
         arrow.gameObject.SetActive(false);
-        kij = GetComponent<AudioSource>();
 
         // Get a reference for our line renderer, or add one if not present.
         lineRenderer = GetComponent<LineRenderer>();
